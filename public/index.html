@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- build:js -->
+    <script src="./libs/system.js"></script>
+    <script src="./config/system.config.js"></script>
+    <script src="./libs/firebase.js"></script>
+    <script src="./libs/firebase-app.js"></script>
+    <script src="./libs/firebase-auth.js"></script>
+    <script src="./libs/firebase-database.js"></script>
+    <script src="./libs/firebase-storage.js"></script>
+    <script src="./config/firebase.config.js"></script>
+    <script src="./libs/handlebars.js"></script>
+    <script src="./libs/navigo.min.js"></script>
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/toastr.js"></script>
+    <script src="./libs/menu-toggle.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="./libs/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/bootstrap-theme.css">
+    <link rel="stylesheet" href="./libs/toastr.css">
+    <link rel="stylesheet" href="./libs/jquery-ui.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- endbuild -->
+
+    <title>SPA Template</title>
+</head>
+
+<body>
+
+    <section id="home-header-section">
+        <header id="main-header">
+            <div class="site-logo">
+                <img src="./assets/images/header-logo.png" alt="Site logo" class="logo-img">
+                <span href="#/home" class="site-title">islandsushi</span>
+            </div>
+            <nav id="main-nav" role="navigation">
+                <ul>
+                    <li><a href="#/home">HOME</a></li>
+                    <li><a href="#/menu">MENU</a></li>
+                    <li><a href="#/location">LOCATION</a></li>
+                </ul>
+            </nav>
+            <nav id="mobile-nav" role="navigation">
+                <div id="btn-mobile-nav"><img src="./assets/images/mobile-nav-button.png" alt="sushi-button" class="mobile-nav-button"></div>
+                <ul class="sub-menu">
+                    <li><a href="#/home">HOME</a></li>
+                    <li><a href="#/menu">MENU</a></li>
+                    <li><a href="#/location">LOCATION</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+
+    <main id="main">
+
+    </main>
+
+    <footer id="home-footer">
+        <div class="footer-widgets-container">
+            <hr align="center" class="footer-horizontal-line"/>
+            <div class="previews">
+                <article class="preview">
+                    <img src="./assets/images/footer-logo-2.png" alt="Site logo" class="logo-img">
+                    <h2 class="footer-title">islandsushi</h2>
+                    <p class="footer-copyright">
+                        © MyCuisine Theme, 2010
+                    </p>
+                    <p class="footer-description">
+                        Donec placerat sodales aliquet. Vivamus neque nulla, fermentum id ultrices at, vulputate et risus. Aenean non lectus ipsum. Curabitur sagittis urna vel elit euismod faucibus. Aliquam sed magna id dolor cursus ullamcorper ut commodo nunc. Mauris suscipit, dolor et tristique scelerisque, leo neque congue libero, mollis accumsan nulla 
+                    </p>
+                </article>
+                <article class="preview">
+                    <h2 class="preview-title">RECENT COMMENTS</h2>
+                    <ul>
+                        <li class="footer-description">Rhoncus quis varius sed velit nibh moles</li>
+                        <li class="footer-description">Mauris quis nunc eu nunc molestie</li>
+                        <li class="footer-description">Egestas et sit amet odio morbi quis nunc</li>
+                        <li class="footer-description">Lacinia velit in nibh sodales sed quis nunc </li>
+                        <li class="footer-description">Pharetra sem feugiat nibh sodales sed </li>
+                        <li class="footer-description">Vivamus ut cursus augue nibh sodales sed </li>
+                    </ul>
+                </article>
+                <article class="preview">
+                    <h2 class="preview-title">RECENT POSTS</h2>
+                    <ul>
+                            <li class="footer-description">Rhoncus quis varius sed velit nibh moles</li>
+                            <li class="footer-description">Mauris quis nunc eu nunc molestie</li>
+                            <li class="footer-description">Egestas et sit amet odio morbi quis nunc</li>
+                            <li class="footer-description">Lacinia velit in nibh sodales sed quis nunc </li>
+                            <li class="footer-description">Pharetra sem feugiat nibh sodales sed </li>
+                            <li class="footer-description">Vivamus ut cursus augue nibh sodales sed </li>
+                        </ul>
+                </article>
+            </div>
+        </div>
+        <!-- <p><a href="#/menu" class="button">Menu</a></p> -->
+        <!-- <p class="footer-logo"><img src="./assets/images/footer-logo.png" alt="footer-logo"></p> -->
+        <nav id="footer-nav" role="navigation">
+            <ul>
+                <li><a href="#/home">HOME</a></li>
+                <li><a href="#/menu">MENU</a></li>
+                <li><a href="#/location">LOCATION</a></li>
+            </ul>
+        </nav>
+        <div class="footer-copyright">
+            <p>Designed by <a href="http://www.elegantthemes.com/" title=" Ultimate WordPress Toolkit For Web Design" class="copyright-link">ElegantThemes</a>                - Powered by <a href="https://bg.wordpress.org/" class="copyright-link">WordPress</a></p>
+        </div>
+    </footer>
+
+
+    <script>
+        System.import("index");
+        firebase.initializeApp(config);
+    </script>
+</body>
+
+</html>

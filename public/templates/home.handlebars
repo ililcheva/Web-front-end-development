@@ -1,0 +1,220 @@
+<section id="main-header-section">
+        <header id="main-header">
+            <div class="site-logo">
+                <img src="./assets/images/header-logo.png" alt="Site logo" class="logo-img">
+                <span href="#/home" class="site-title">islandsushi</span>
+            </div>
+            <nav id="main-nav" role="navigation">
+                <ul>
+                    <li><a href="#/home">HOME</a></li>
+                    <li><a href="#/menu">MENU</a></li>
+                    <li><a href="#/location">LOCATION</a></li>
+                </ul>
+            </nav>
+            <nav id="mobile-nav" role="navigation">
+                <div id="btn-mobile-nav"><img src="./assets/images/mobile-nav-button.png" alt="sushi-button" class="mobile-nav-button"></div>
+                <ul class="sub-menu">
+                    <li><a href="#/home">HOME</a></li>
+                    <li><a href="#/menu">MENU</a></li>
+                    <li><a href="#/location">LOCATION</a></li>
+                </ul>
+            </nav>
+        </header>
+</section>
+<main id="main">
+<section id="slider">
+    <div class="slides-wrap">
+        {{!-- <ul>
+            {{#posts}}
+            <li class="slide">
+                <img src="{{imageUrl}}" alt="{{title}}" width="960" height="332" class="slide-img">
+                <div class="slide-description">
+                    <h2 class="slide-title">{{title}}</h2>
+                    <p class="slide-content">{{content}}</p>
+                    <a href="#/posts/{{key}}" class="button">Read More</a>
+                </div>
+                <div class="slide-top-shadow"></div>
+                <div class="slide-bottom-shadow"></div>
+            </li>
+            {{/posts}}
+        </ul> --}}
+         <ul>
+            <li class="slide">
+                <div class="slide-img"></div>
+                <div class="slide-description">
+                    <h2 class="slide-title">DELICIOUS FOOD THAT WON'T HURT YOUR WALLET</h2>
+                    <p class="slide-content">Fusce nunc diam, suscipit a iaculis ac, tristique ac erat. Nunc eros lacus, placerat non ornare et, dignissim ut ligula. Duis sed neque et velit rutrum rutrum ut nec tellus. Nulla facilisi.</p>
+                    <a href="#/home" class="button">Read More</a>
+                </div>
+                <div class="slide-top-shadow"></div>
+                <div class="slide-bottom-shadow"></div>
+            </li>
+        </ul> 
+        <ul class="slider-nav">
+            <li><a href="#" class="slider-prev">Prev</a></li>
+            <li><a href="#" class="slider-next">Next</a></li>
+        </ul>
+    </div>
+    <ol class="slider-controller">
+        <li><a href="#" class="active">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+    </ol>
+</section>
+{{!-- <section id="main-content" class="group">
+    <header class="content-header home-content-header">
+        <h1>"Healthy World is a site where you can find useful materials about healthy lifestyle"</h1>
+        <p class="content-description">Aliquam venenatis enim in mi iaculis in tempor lectus tempor et convallis erat pellentesque</p>
+    </header>
+    <div class="previews group">
+        {{#posts}}
+        <article class="preview">
+            <h2 class="preview-title">{{title}}</h2>
+            <div class="img-container preview-img-container">
+                <a href="#/posts/{{key}}">
+                    <img src="{{imageUrl}}" alt="{{title}}" class="post-img preview-img" width="800px" height="800px">
+                    <span class="preview-hover-icon"></span>
+                </a>
+            </div>
+            <p class="preview-content">{{content}}</p>
+        </article>
+        {{/posts}}
+    </div>
+    <div class="home-related">
+        <aside class="home-aside home-aside-list">
+            <h4 class="related-links-title">From The Blog</h4>
+            <ul class="recent-posts related-links">
+                {{#recentPosts}}
+                <li><a href="{{key}}">{{value}}</a></li>
+                {{/recentPosts}}
+            </ul>
+        </aside>
+        <aside class="home-aside">
+            <h4 class="related-links-title">Multi-Media Bar</h4>
+            <div id="multi-media-bar" class="group">
+                {{#media}}
+                <div class="img-container media-img-container">
+                    <img src="{{url}}" alt="{{desc}}" class="post-img media-img">
+                    <span class="media-hover-icon"></span>
+                    <div class="media-description">
+                        <p>{{desc}}</p>
+                        <span class="media-arrow"></span>
+                    </div>
+                </div>
+                {{/media}}
+                <ul class="media-nav">
+                    <li><a href="#" class="media-prev">Prev</a></li>
+                    <li><a href="#" class="media-next">Next</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</section> --}}
+ <section id="main-content" class="group">
+    <header class="content-header home-content-header">
+        <h1>"Authentic tastes. Authentic atmosphere. The place where sushi and glamour meet."</h1>
+        <p class="content-description">Aliquam venenatis enim in mi iaculis in tempor lectus tempor et convallis erat pellentesque</p>
+        <p><img src="../assets/images/stars.png" alt="stars"></p>
+    </header>
+    <div class="previews">
+        <article class="preview">
+            <h2 class="preview-title">CHEF'S RECOMMENDATIONS</h2>
+            <div class="chef-menu-item">
+                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
+                <article>
+                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
+                    <p class="home-blurbs-desc">
+                        Smoked salmon, light cream cheese, avocado
+                    </p>
+                </article>
+            </div>
+            <div class="chef-menu-item">
+                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
+                <article>
+                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
+                    <p class="home-blurbs-desc">
+                        Smoked salmon, light cream cheese, avocado
+                    </p>
+                </article>
+            </div>
+            <div class="chef-menu-item">
+                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
+                <article>
+                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
+                    <p class="home-blurbs-desc">
+                        Smoked salmon, light cream cheese, avocado
+                    </p>
+                </article>
+            </div>
+        </article>
+        <article class="preview">
+            <h2 class="preview-title">LOCATION AND HOURS OF OPERATION</h2>
+            <div class="location-article">
+                <img class="home-blurbs-img" src="https://www.thewholeworldisaplayground.com/wp-content/uploads/2016/06/Sushi-Dai-Location-Map.png" alt="sushi-location">
+                <p class="home-blurbs-desc">
+                    3214 Sunny st. Petaluma, CA 55439
+                </p>
+                <div>
+                    <h4 class="preview-title">MON-FRI</h4>
+                    <h6>8am-6pm</h6>
+                    <h4 class="preview-title">SAT-SUN</h4>
+                    <h6>8am-10pm</h6>
+                </div>
+            </div>
+        </article>
+        <article class="preview">
+            <h2 class="preview-title">CUSTOMER TESTIMONIALS</h2>
+            <div class="customer-review-article">
+                <img class="home-blurbs-img" src="https://maxcdn.icons8.com/Share/icon/Users//person_male1600.png" alt="person-icon">
+                <h4 class="home-blurbs-title"> Nick Roach </h4>
+                <p class="home-blurbs-desc">
+                    “In justo nibh, congue nec dapibus ac, placerat In justo nibh, congue nec dapibus ac, placerat eget sem. Nunc consequat felis non elit ultricies in varius massa laoreet. Aenean lectus nisl, ellentesque in fermentum sit amet, convallis a lorem condimentum mollis augue.”
+                </p>
+            </div>
+        </article>
+    </div>
+    {{!-- <div class="home-related">
+        <aside class="home-aside home-aside-list">
+            <h4 class="related-links-title">From The Blog</h4>
+            <ul class="recent-posts related-links">
+                {{#recentPosts}}
+                <li><a href="{{key}}">{{value}}</a></li>
+                {{/recentPosts}}
+            </ul>
+        </aside>
+        <aside class="home-aside">
+            <h4 class="related-links-title">Multi-Media Bar</h4>
+            <div id="multi-media-bar" class="group">
+                {{#media}}
+                <div class="img-container media-img-container">
+                    <img src="{{url}}" alt="{{desc}}" class="post-img media-img">
+                    <span class="media-hover-icon"></span>
+                    <div class="media-description">
+                        <p>{{desc}}</p>
+                        <span class="media-arrow"></span>
+                    </div>
+                </div>
+                {{/media}}
+                <ul class="media-nav">
+                    <li><a href="#" class="media-prev">Prev</a></li>
+                    <li><a href="#" class="media-next">Next</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>  --}}
+</section> 
+</main>
+<footer id="main-footer">
+        <!-- <p><a href="#/menu" class="button">Menu</a></p> -->
+        <p class="footer-logo"><img src="./assets/images/footer-logo.png" alt="footer-logo"></p>
+        <nav id="footer-nav" role="navigation">
+            <ul>
+                <li><a href="#/home">HOME</a></li>
+                <li><a href="#/menu">MENU</a></li>
+                <li><a href="#/location">LOCATION</a></li>
+            </ul>
+        </nav>
+        <div class="footer-copyright">
+            <p>Designed by <a href="http://www.elegantthemes.com/" title=" Ultimate WordPress Toolkit For Web Design" class="copyright-link">ElegantThemes</a>                - Powered by <a href="https://bg.wordpress.org/" class="copyright-link">WordPress</a></p>
+        </div>
+</footer>
