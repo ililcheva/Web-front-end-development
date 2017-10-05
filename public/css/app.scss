@@ -629,13 +629,14 @@ main {
   background: url("../images/btn-active-controller-bg.png");
 }
 
-.home-content-header {
-  // background: 0;
-}
+// .home-content-header {
+//   // background: 0;
+// }
 
 .previews {
   margin-top: 3em;
   margin-bottom: 3em;
+  margin-left: 10em;
   padding-left: 3em;
   display: flex;
   flex-direction: row;
@@ -673,7 +674,7 @@ main {
   }
 }
 
-h4.home-blurbs-title {
+.home-blurbs-title {
       font-family: 'LeagueGothic';
       color: #442917;
       flex-basis: 40%;
@@ -681,6 +682,10 @@ h4.home-blurbs-title {
       padding-left: 0.6em;
       font-size: 1.8em;
       text-shadow: 0 1.1px rgba(255, 255, 255, 1), 1.1px 0 rgba(255, 255, 255, 1);
+      &:hover, &:focus {
+        text-decoration: none;
+        color: #442917;
+      }
 }
 
 p.home-blurbs-desc {

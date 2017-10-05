@@ -9,103 +9,70 @@
     </div>
     <div class="previews">
         <article class="preview">
-            <h2 class="preview-title">CHEF'S RECOMMENDATIONS</h2>
+            <h2 class="preview-title">SUSHI</h2>
+            {{#dishes}}
+            {{#if sushi}}
             <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
+                <img class="home-blurbs-img" src="{{pictureUrl}}" alt="{{name}}">
                 <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
+                    <a class="home-blurbs-title" href="#/menu/{{id}}"> {{name}} </a>
                     <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
+                        {{#each ingredients}}
+                        {{#if @last}}
+                        {{this}}
+                        {{else}}
+                        {{this}},
+                        {{/if}}
+                        {{/each}}
                     </p>
                 </article>
             </div>
-            <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
-                <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
-                    <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
-                    </p>
-                </article>
-            </div>
-            <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
-                <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
-                    <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
-                    </p>
-                </article>
-            </div>
-            <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
-                <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
-                    <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
-                    </p>
-                </article>
-            </div>
+            {{/if}}
+            {{/dishes}}
         </article>
         <article class="preview">
-            <h2 class="preview-title">CHEF'S RECOMMENDATIONS</h2>
+            <h2 class="preview-title">PIZZA</h2>
+            {{#dishes}}
+            {{#if pizza}}
             <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
+                <img class="home-blurbs-img" src="{{pictureUrl}}" alt="{{name}}">
                 <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
+                    <a class="home-blurbs-title" href="#/menu/{{id}}">{{name}}</a>
                     <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
+                        {{#each ingredients}}
+                        {{#if @last}}
+                        {{this}}
+                        {{else}}
+                        {{this}},
+                        {{/if}}
+                        {{/each}}
                     </p>
                 </article>
             </div>
-            <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
-                <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
-                    <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
-                    </p>
-                </article>
-            </div>
-            <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
-                <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
-                    <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
-                    </p>
-                </article>
-            </div>
+            {{/if}}
+            {{/dishes}}
         </article>
         <article class="preview">
-            <h2 class="preview-title">CHEF'S RECOMMENDATIONS</h2>
+            <h2 class="preview-title">POKE</h2>
+            {{#dishes}}
+            {{#if poke}}
             <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
+                <img class="home-blurbs-img" src="{{pictureUrl}}" alt="{{name}}">
                 <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
+                    <a class="home-blurbs-title" href="#/menu/{{id}}">{{name}}</a>
                     <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
+                        {{#each ingredients}}
+                        {{#if @last}}
+                        {{this}}
+                        {{else}}
+                        {{this}},
+                        {{/if}}
+                        {{/each}}
                     </p>
                 </article>
             </div>
-            <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
-                <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
-                    <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
-                    </p>
-                </article>
-            </div>
-            <div class="chef-menu-item">
-                <img class="home-blurbs-img" src="http://www.sushishop.com/themes/web/assets/files/menuitem/philly-kunsei-syake-nigiri.png" alt="syake-nigiri">
-                <article>
-                    <h4 class="home-blurbs-title"> Philly Kunsei Syake Nigiri </h4>
-                    <p class="home-blurbs-desc">
-                        Smoked salmon, light cream cheese, avocado
-                    </p>
-                </article>
-            </div>
+            {{/if}}
+            {{/dishes}}
         </article>
     </div>
 </section>

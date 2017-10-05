@@ -13,7 +13,7 @@ router
         '/home': homeController,
         '/menu': menuController,
         '/location': locationController,
-        '/post': postController
+        '/menu/:id': postController
     })
     .notFound(() => templates.getPage('notFound', {}))
     .resolve();
