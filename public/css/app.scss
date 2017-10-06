@@ -19,6 +19,9 @@
   padding: 0;
 }
 
+html{
+  overflow-x: hidden;
+}
 body {
   background: white;
   font-family: 'Times New Roman', Arial, Verdana, sans-serif;
@@ -536,6 +539,11 @@ main {
   color: #fff;
   opacity: 1;
 }
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
 
 .button {
   flex-basis: 10%;
@@ -636,7 +644,7 @@ main {
 .previews {
   margin-top: 3em;
   margin-bottom: 3em;
-  margin-left: 10em;
+  margin-left: 2em;
   padding-left: 3em;
   display: flex;
   flex-direction: row;
@@ -647,7 +655,7 @@ main {
 
 .previews article:not(:last-child),
 .home-related aside:not(:last-child) {
-  margin-right: 5.33em;
+  margin-right: 4em;
 }
 
 .preview {
@@ -687,6 +695,19 @@ main {
         color: #442917;
       }
 }
+.home-blurbs-price {
+  font-family: 'LeagueGothic';
+  position: absolute;
+  margin: 0.8em 0 0 -0.4em;
+  z-index: 99;
+  color: white;
+  font-size: 1.5em;
+}
+
+.home-blurbs-pricetag {
+  position: absolute;
+  margin: 0.6em 0 0 -1em;
+}
 
 p.home-blurbs-desc {
       flex-basis: 60%;
@@ -706,8 +727,8 @@ p.home-blurbs-desc {
   flex-direction: column;
   justify-content: flex-start;
   img.home-blurbs-img {
-    width: 248px;
-    height: 169px;
+    width: 50%;
+    height: auto;
     flex-basis: 70%;
   }
   p.home-blurbs-desc {
@@ -1236,7 +1257,7 @@ img.home-blurbs-img {
     flex-direction: row;
     justify-content: center;
     .preview {
-      margin-right: 9em;
+      margin-right: 7em;
     }
   }
 
@@ -1246,6 +1267,7 @@ img.home-blurbs-img {
     justify-content: center;
     margin-top: 5em;
     margin-bottom: 5em;
+    margin-left: 3em;
     .location-address {
       display: flex;
       flex-direction: column;
@@ -1287,7 +1309,7 @@ img.home-blurbs-img {
     flex-direction: row;
     justify-content: center;
     span {
-      flex-basis: 5%;
+      flex-basis: 35%;
     }
 }
 
@@ -1381,6 +1403,17 @@ img.home-blurbs-img {
     padding: 0 110px;
   }
 
+  #wrapper {
+    .preview {
+      margin-right: 5em;
+    }
+    .quote {
+      span{
+        flex-basis: 35%;
+      }
+    }
+  }
+
 }
 
 
@@ -1406,10 +1439,22 @@ img.home-blurbs-img {
     padding: 0 50px;
   }
 
+  #wrapper {
+    .previews {
+      margin-left: 15em;
+    }
+    .quote {
+      span{
+        flex-basis: 15%;
+      }
+    }
+  }
+
 
   .preview {
       justify-content: center;
   }
+  
 
   .site-logo {
     margin: 0.3em 5em 0 -3em;
@@ -1533,6 +1578,14 @@ img.home-blurbs-img {
     justify-content: center;
   }
 
+  #wrapper {
+    .quote {
+      span{
+        flex-basis: 10%;
+      }
+    }
+  }
+
   .preview-title,
   .post-title {
     text-align: center;
@@ -1603,11 +1656,37 @@ img.home-blurbs-img {
     .preview:nth-of-type(2), .preview:nth-of-type(3) {
       display: none;
     }
+    .preview:first-of-type {
+      margin-left: 10em;
+    }
+  }
+
+  #mobile-nav{
+    display:none;
   }
   #slider,
   .post-img-container,
   .author-img-container {
     display: none;
+  }
+
+  #wrapper {
+    .page-title, .page-description {
+        left: 100px;
+    }
+    .page-navigation {
+      display: none;
+    }
+    .quote {
+      span{
+        flex-basis: 5%;
+      }
+    }
+  }
+
+  .previews article:not(:last-child),
+  .home-related aside:not(:last-child) {
+    margin-right: 15.33em;
   }
 
   .preview {

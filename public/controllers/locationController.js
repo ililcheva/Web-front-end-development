@@ -2,7 +2,13 @@ import { templates } from 'templates';
 import 'bootstrap';
 
 const locationController = () => {
-    templates.getPage('location', {}, '#main');
+    $('section#main-header-section').removeAttr('id').attr('id', 'home-header-section');
+    const data = firebase.database().ref('/');
+    data.once('value')
+      .then((snapshot) => {
+        const root = snapshot.val();
+        templates.getPage('location', root, '#main');
+      });
 };
 
 export { locationController };

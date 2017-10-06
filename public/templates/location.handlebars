@@ -8,25 +8,28 @@
         <button class="search-button"> Search </button>
     </div>
     <div class="location-view">
+        {{#restaurant}}
         <article class="location-address">
             <div>
                 <h2 class="preview-title">ADDRESS</h2>
-                <p class="location-info">3324 Sunny Drive Street
-                Some City CA, 33423</p>
+                <p class="location-info"> {{address}}</p>
             </div>
+            {{#working-hours}}
             <div>
                 <h2 class="preview-title">HOURS OF OPERATION</h2>
-                <p class="location-info">MONDAY-FRIDAY: <span>8am-10pm</span></p>
-                <p class="location-info">SATURDAY-SUNDAY: <span>10am-8pm</span></p>
+                <p class="location-info">MONDAY-FRIDAY: <span>{{weekdays.start}}-{{weekdays.end}}</span></p>
+                <p class="location-info">SATURDAY-SUNDAY: <span>{{weekend.start}}-{{weekend.end}}</span></p>
             </div>
+            {{/working-hours}}
             <div>
                 <h2 class="preview-title">CONTACT INFO</h2>
-                <p class="location-info">EMAIL ADDRESS: <span>info@mycuisine.com</span></p>
-                <p class="location-info">TELEPHONE: <span>754-234-6643</span></p>
-                <p class="location-info">FAX: <span>343-664-2234</span></p>
+                <p class="location-info">EMAIL ADDRESS: <span>{{email}}</span></p>
+                <p class="location-info">TELEPHONE: <span>{{telephone}}</span></p>
+                <p class="location-info">FAX: <span>{{fax}}</span></p>
             </div>
         </article>
-        <article class="location-map">
+        {{/restaurant}}
+        <article class="location-map" id="map">
             
         </article>
     </div>

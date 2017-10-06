@@ -10,6 +10,7 @@ const concat = require('gulp-concat');
 const rev = require('gulp-rev');
 const cleanCss = require('gulp-clean-css');
 const htmlMin = require('gulp-htmlmin');
+const browserify = require('gulp-browserify');
 
 const input = './css/**/*.scss';
 const output = './css';
@@ -51,6 +52,18 @@ gulp.task("build", function () {
  * DEVELOPMENT
  * $ gulp dev
  */
+// gulp.task('js', function () {
+//     return gulp.src('./controllers/*.js')
+//         .pipe(browserify())
+//         .pipe(uglify())
+//         .pipe(gulp.dest('./libs/*.js'));
+// });
+
+// gulp.task('js-watch', ['js'], function (done) {
+//     browserSync.reload();
+//     done();
+// });
+
 gulp.task('sass', () => {
 	return gulp.src(input)
 	.pipe(sourcemaps.init())
@@ -69,6 +82,7 @@ gulp.task('serve', ['sass'], () => {
     });
 
     gulp.watch("./css/*.scss", ['sass']);
+    // gulp.watch("./controllers/*.js", ['js-watch']);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
  

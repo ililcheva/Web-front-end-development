@@ -2,7 +2,7 @@
         <header id="main-header">
             <div class="site-logo">
                 <img src="./assets/images/header-logo.png" alt="Site logo" class="logo-img">
-                <span href="#/home" class="site-title">islandsushi</span>
+                {{#restaurant}}<span href="#/home" class="site-title">{{name}}</span>{{/restaurant}}
             </div>
             <nav id="main-nav" role="navigation">
                 <ul>
@@ -24,20 +24,6 @@
 <main id="main">
 <section id="slider">
     <div class="slides-wrap">
-        {{!-- <ul>
-            {{#posts}}
-            <li class="slide">
-                <img src="{{imageUrl}}" alt="{{title}}" width="960" height="332" class="slide-img">
-                <div class="slide-description">
-                    <h2 class="slide-title">{{title}}</h2>
-                    <p class="slide-content">{{content}}</p>
-                    <a href="#/posts/{{key}}" class="button">Read More</a>
-                </div>
-                <div class="slide-top-shadow"></div>
-                <div class="slide-bottom-shadow"></div>
-            </li>
-            {{/posts}}
-        </ul> --}}
          <ul>
             <li class="slide">
                 <div class="slide-img"></div>
@@ -61,61 +47,14 @@
         <li><a href="#">3</a></li>
     </ol>
 </section>
-{{!-- <section id="main-content" class="group">
-    <header class="content-header home-content-header">
-        <h1>"Healthy World is a site where you can find useful materials about healthy lifestyle"</h1>
-        <p class="content-description">Aliquam venenatis enim in mi iaculis in tempor lectus tempor et convallis erat pellentesque</p>
-    </header>
-    <div class="previews group">
-        {{#posts}}
-        <article class="preview">
-            <h2 class="preview-title">{{title}}</h2>
-            <div class="img-container preview-img-container">
-                <a href="#/posts/{{key}}">
-                    <img src="{{imageUrl}}" alt="{{title}}" class="post-img preview-img" width="800px" height="800px">
-                    <span class="preview-hover-icon"></span>
-                </a>
-            </div>
-            <p class="preview-content">{{content}}</p>
-        </article>
-        {{/posts}}
-    </div>
-    <div class="home-related">
-        <aside class="home-aside home-aside-list">
-            <h4 class="related-links-title">From The Blog</h4>
-            <ul class="recent-posts related-links">
-                {{#recentPosts}}
-                <li><a href="{{key}}">{{value}}</a></li>
-                {{/recentPosts}}
-            </ul>
-        </aside>
-        <aside class="home-aside">
-            <h4 class="related-links-title">Multi-Media Bar</h4>
-            <div id="multi-media-bar" class="group">
-                {{#media}}
-                <div class="img-container media-img-container">
-                    <img src="{{url}}" alt="{{desc}}" class="post-img media-img">
-                    <span class="media-hover-icon"></span>
-                    <div class="media-description">
-                        <p>{{desc}}</p>
-                        <span class="media-arrow"></span>
-                    </div>
-                </div>
-                {{/media}}
-                <ul class="media-nav">
-                    <li><a href="#" class="media-prev">Prev</a></li>
-                    <li><a href="#" class="media-next">Next</a></li>
-                </ul>
-            </div>
-        </aside>
-    </div>
-</section> --}}
  <section id="main-content" class="group">
+    {{#restaurant}}
     <header class="content-header home-content-header">
-        <h1>"Authentic tastes. Authentic atmosphere. The place where sushi and glamour meet."</h1>
-        <p class="content-description">Aliquam venenatis enim in mi iaculis in tempor lectus tempor et convallis erat pellentesque</p>
+        <h1>"{{slogan}}"</h1>
+        <p class="content-description">{{slogan}}</p>
         <p><img src="../assets/images/stars.png" alt="stars"></p>
     </header>
+    {{/restaurant}}
     <div class="previews">
         <article class="preview">
             <h2 class="preview-title">CHEF'S RECOMMENDATIONS</h2>
@@ -137,21 +76,27 @@
             </div>
             {{/chefFaves}}
         </article>
+        {{#restaurant}}
         <article class="preview">
             <h2 class="preview-title">LOCATION AND HOURS OF OPERATION</h2>
             <div class="location-article">
-                <img class="home-blurbs-img" src="https://www.thewholeworldisaplayground.com/wp-content/uploads/2016/06/Sushi-Dai-Location-Map.png" alt="sushi-location">
+                <article class="home-blurbs-img" id="map">
+                    
+                </article>
                 <p class="home-blurbs-desc">
-                    3214 Sunny st. Petaluma, CA 55439
+                    {{address}}
                 </p>
+                {{#working-hours}}
                 <div>
                     <h4 class="preview-title">MON-FRI</h4>
-                    <h6>8am-6pm</h6>
+                    <h6>{{weekdays.start}}-{{weekdays.end}}</h6>
                     <h4 class="preview-title">SAT-SUN</h4>
-                    <h6>8am-10pm</h6>
+                    <h6>{{weekend.start}}-{{weekend.end}}</h6>
                 </div>
+                {{/working-hours}}
             </div>
         </article>
+        {{/restaurant}}
         <article class="preview">
             <h2 class="preview-title">CUSTOMER TESTIMONIALS</h2>
             <div class="customer-review-article">
@@ -171,35 +116,7 @@
             </div>
         </article>
     </div>
-    {{!-- <div class="home-related">
-        <aside class="home-aside home-aside-list">
-            <h4 class="related-links-title">From The Blog</h4>
-            <ul class="recent-posts related-links">
-                {{#recentPosts}}
-                <li><a href="{{key}}">{{value}}</a></li>
-                {{/recentPosts}}
-            </ul>
-        </aside>
-        <aside class="home-aside">
-            <h4 class="related-links-title">Multi-Media Bar</h4>
-            <div id="multi-media-bar" class="group">
-                {{#media}}
-                <div class="img-container media-img-container">
-                    <img src="{{url}}" alt="{{desc}}" class="post-img media-img">
-                    <span class="media-hover-icon"></span>
-                    <div class="media-description">
-                        <p>{{desc}}</p>
-                        <span class="media-arrow"></span>
-                    </div>
-                </div>
-                {{/media}}
-                <ul class="media-nav">
-                    <li><a href="#" class="media-prev">Prev</a></li>
-                    <li><a href="#" class="media-next">Next</a></li>
-                </ul>
-            </div>
-        </aside>
-    </div>  --}}
+    
 </section> 
 </main>
 <footer id="main-footer">
