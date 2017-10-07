@@ -4,7 +4,6 @@ import 'bootstrap';
 const homeController = () => {
     $('#home-header-section').hide();
     $('#home-footer').hide();
-    $('#main').hide();
     const data = firebase.database().ref('/');
     data.once('value')
       .then((snapshot) => {

@@ -3,6 +3,7 @@ import 'bootstrap';
 
 const locationController = () => {
     $('section#main-header-section').removeAttr('id').attr('id', 'home-header-section');
+    $('footer').removeAttr('id').attr('id', 'home-footer');
     const data = firebase.database().ref('/');
     data.once('value')
       .then((snapshot) => {
