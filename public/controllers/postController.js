@@ -1,6 +1,8 @@
 import { templates } from 'templates';
 import 'bootstrap';
 import { toggleMenu } from 'toggleController';
+import { search } from 'searchController';
+import $ from 'jquery';
 
 const postController = () => {
     const id = window.location.href.split('/')[5];

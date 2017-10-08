@@ -12,7 +12,7 @@ const search = (searchPhrase, data) => {
               filteredDishes.push(dish);
             }
           });
-          return templates.getPage('search', {filteredDishes: filteredDishes}, '#main');
+          templates.getPage('search', {filteredDishes: filteredDishes}, '#main');
         });
 };
 

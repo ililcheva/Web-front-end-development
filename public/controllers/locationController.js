@@ -2,6 +2,8 @@ import { templates } from 'templates';
 import 'bootstrap';
 import { initMap } from 'mapController';
 import { toggleMenu } from 'toggleController';
+import { search } from 'searchController';
+import $ from 'jquery';
 
 const locationController = () => {
   const data = firebase.database().ref('/');
@@ -18,6 +20,10 @@ const locationController = () => {
                 .then(() => {
                   toggleMenu();
                   initMap();
+                  $('.search-button').on('click', (event) => {
+                    const searchPhrase = $('.search-input').val();
+                    search(searchPhrase, data);
+                  });
                 });
             });
         });
