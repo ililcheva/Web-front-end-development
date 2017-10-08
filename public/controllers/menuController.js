@@ -21,7 +21,7 @@ const menuController = () => {
                   $('.search-button').on('click', (event) => {
                     const searchPhrase = $('.search-input').val();
                     search(searchPhrase, data);
-                  })
+                  });
                 });
             });
         });

@@ -27,7 +27,6 @@ const homeController = () => {
                         });
                 });
         });
-    // templates.getPage('home', {}, 'body');
 };
 
 export { homeController };
