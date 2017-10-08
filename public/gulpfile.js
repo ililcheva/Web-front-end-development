@@ -11,31 +11,65 @@ const rev = require('gulp-rev');
 const cleanCss = require('gulp-clean-css');
 const htmlMin = require('gulp-htmlmin');
 const browserify = require('gulp-browserify');
+const csslint = require('gulp-csslint');
+const jshint = require('gulp-jshint');
+var html5Lint = require('gulp-html5-lint');
 
 const input = './css/**/*.scss';
 const output = './css';
 
 /**
+ * POSTPROCESSORS
+ * $ gulp lint
+ */
+gulp.task("lint", () => {
+    return gulp.src("./index.html")
+    .pipe(spa.html({
+        assetsDir: "./",
+        pipelines: {
+            main: (files) => {
+                return files
+                    .pipe(html5Lint())
+            },
+
+            js: (files) => {
+                return files
+                    .pipe(jshint())
+                    .pipe(jshint.reporter('default'))
+            },
+
+            css: (files) => {
+                return files
+                    .pipe(csslint())
+                    .pipe(csslint.formatter())
+            }
+        }
+    }))
+    .pipe(gulp.dest("./"));
+});
+
+/**
  * BUILD
  * $ gulp build
  */
-gulp.task("build", function () {
+gulp.task("build", () => {
     return gulp.src("./index.html")
         .pipe(spa.html({
             assetsDir: "./",
             pipelines: {
-                main: function (files) {
-                    return files.pipe(htmlMin());
+                main: (files) => {
+                    return files
+                        .pipe(htmlMin());
                 },
 
-                js: function (files) {
+                js: (files) => {
                     return files
                         .pipe(uglify())
                         .pipe(concat("app.js"))
                         .pipe(rev());
                 },
 
-                css: function (files) {
+                css: (files) => {
                     return files
                         .pipe(cleanCss())
                         .pipe(concat("app.css"))
