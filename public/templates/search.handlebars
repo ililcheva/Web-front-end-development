@@ -1,0 +1,38 @@
+<section id="wrapper">
+    <div class="quote">
+        <h2 class="page-title"> SEARCH </h2>
+        <p class="page-description"> Find your own happiness. </p>
+        <a href="#/search" class="page-navigation"> » SEARCH </a>
+        <span></span>
+        <input type="text" class="search-input" placeholder="Search this website...">
+        <button class="search-button"> Search </button>
+    </div>
+    <div class="previews">
+        <article class="preview">
+            <h2 class="preview-title"></h2>
+            {{#if filteredDishes.length}}
+            {{#filteredDishes}}
+            <div class="chef-menu-item">
+                <span class="home-blurbs-price">${{price}}</span>
+                <img class="home-blurbs-pricetag" src="../assets/images/price-tag.png" alt="price-tag">
+                <img class="home-blurbs-img" src="{{pictureUrl}}" alt="{{name}}">
+                <article>
+                    <a class="home-blurbs-title" href="#/menu/{{id}}"> {{name}} </a>
+                    <p class="home-blurbs-desc">
+                        {{#each ingredients}}
+                        {{#if @last}}
+                        {{this}}
+                        {{else}}
+                        {{this}},
+                        {{/if}}
+                        {{/each}}
+                    </p>
+                </article>
+            </div>
+            {{/filteredDishes}}
+            {{else}}
+            <h2 class="preview-title"> No results were found for "{{filteredDishes.searchPhrase}}"</h2>
+            {{/if}}
+        </article>
+    </div>
+</section>

@@ -8,7 +8,7 @@ import {postController} from 'postController';
 const router = new Navigo(null, false, '#!');
 
 router
-    .on(() => menuController())
+    .on(() => homeController())
     .on({
         '/home': homeController,
         '/menu': menuController,

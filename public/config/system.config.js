@@ -12,6 +12,9 @@ SystemJS.config({
         "locationController": "../controllers/locationController.js",
         "menuController": "../controllers/menuController.js",
         "postController": "../controllers/postController.js",
+        "searchController": "../controllers/searchController.js",
+        "toggleController": "../controllers/toggleController.js",
+        "mapController": "../controllers/mapController.js",
 
         //Libraries\\
         "jquery": "../node_modules/jquery/dist/jquery.js",

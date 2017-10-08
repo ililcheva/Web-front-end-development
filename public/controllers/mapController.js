@@ -9,3 +9,5 @@ const initMap = () => {
             position: coords
     });
 }
+
+export {initMap};
