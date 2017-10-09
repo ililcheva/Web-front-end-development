@@ -1,8 +1,10 @@
-### Web front-end development - Telerik Academy
+# Web front-end development - Telerik Academy
+
+A Sushi Restaurant SPApp.
 
 ### Links
 * [IslandSushi](https://islandsushi-352e6.firebaseapp.com/)
-* [Developed by](https://telerikacademy.com/Users/ililcheva)
+* [ililcheva](https://telerikacademy.com/Users/ililcheva)
 
 ### Tasks
 * Run `gulp dev` for an app live server and SASS to CSS compilation. Navigate to `http://localhost:3000/`
