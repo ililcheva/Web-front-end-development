@@ -9,8 +9,9 @@
     </div>
     <div class="previews">
         <article class="preview">
-            <h2 class="preview-title"></h2>
+            {{!-- <h2 class="preview-title"></h2> --}}
             {{#if filteredDishes.length}}
+            <h2 class="preview-title"> Results found for "{{filteredDishes.searchPhrase}}"</h2>
             {{#filteredDishes}}
             <div class="chef-menu-item">
                 <span class="home-blurbs-price">${{price}}</span>

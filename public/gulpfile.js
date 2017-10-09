@@ -55,7 +55,7 @@ gulp.task("lint", () => {
 gulp.task("build", () => {
     return gulp.src("./index.html")
         .pipe(spa.html({
-            assetsDir: "./",
+            assetsDir: "./build",
             pipelines: {
                 main: (files) => {
                     return files

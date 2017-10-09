@@ -3,6 +3,7 @@ import 'bootstrap';
 import { initMap } from 'mapController';
 import { toggleMenu } from 'toggleController';
 import { search } from 'searchController';
+import { footerController } from 'footerController';
 import $ from 'jquery';
 
 const locationController = () => {
@@ -16,7 +17,8 @@ const locationController = () => {
           $('#main-footer').removeAttr('id').attr('id', 'home-footer')
           templates.getPage('main-header', {}, "#home-header-section")
             .then(() => {
-              templates.getPage('main-footer', {}, "#home-footer")
+              footerController(root);
+              templates.getPage('main-footer', root, "#home-footer")
                 .then(() => {
                   toggleMenu();
                   initMap();

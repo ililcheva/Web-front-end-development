@@ -15,6 +15,7 @@ SystemJS.config({
         "searchController": "../controllers/searchController.js",
         "toggleController": "../controllers/toggleController.js",
         "mapController": "../controllers/mapController.js",
+        "footerController": "../controllers/footerController.js",
 
         //Libraries\\
         "jquery": "../node_modules/jquery/dist/jquery.js",

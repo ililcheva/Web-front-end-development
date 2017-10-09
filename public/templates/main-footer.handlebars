@@ -7,33 +7,26 @@
                     <p class="footer-copyright">
                         © MyCuisine Theme, 2010
                     </p>
+                    {{#restaurant}}
                     <p class="footer-description">
-                        Donec placerat sodales aliquet. Vivamus neque nulla, fermentum id ultrices at, vulputate et risus. Aenean non lectus ipsum.
-                        Curabitur sagittis urna vel elit euismod faucibus. Aliquam sed magna id dolor cursus ullamcorper
-                        ut commodo nunc. Mauris suscipit, dolor et tristique scelerisque, leo neque congue libero, mollis
-                        accumsan nulla
+                        {{about}}
                     </p>
+                    {{/restaurant}}
                 </article>
                 <article class="preview">
                     <h2 class="preview-title">RECENT COMMENTS</h2>
                     <ul>
-                        <li class="footer-description">Rhoncus quis varius sed velit nibh moles</li>
-                        <li class="footer-description">Mauris quis nunc eu nunc molestie</li>
-                        <li class="footer-description">Egestas et sit amet odio morbi quis nunc</li>
-                        <li class="footer-description">Lacinia velit in nibh sodales sed quis nunc </li>
-                        <li class="footer-description">Pharetra sem feugiat nibh sodales sed </li>
-                        <li class="footer-description">Vivamus ut cursus augue nibh sodales sed </li>
+                        {{#recentComment}}
+                        <li class="footer-description">{{comment}}</li>
+                        {{/recentComment}}
                     </ul>
                 </article>
                 <article class="preview">
-                    <h2 class="preview-title">RECENT POSTS</h2>
+                    <h2 class="preview-title">RECENT DISHES</h2>
                     <ul>
-                        <li class="footer-description">Rhoncus quis varius sed velit nibh moles</li>
-                        <li class="footer-description">Mauris quis nunc eu nunc molestie</li>
-                        <li class="footer-description">Egestas et sit amet odio morbi quis nunc</li>
-                        <li class="footer-description">Lacinia velit in nibh sodales sed quis nunc </li>
-                        <li class="footer-description">Pharetra sem feugiat nibh sodales sed </li>
-                        <li class="footer-description">Vivamus ut cursus augue nibh sodales sed </li>
+                        {{#allDishes}}
+                        <li class="footer-description">{{this}}</li>
+                        {{/allDishes}}
                     </ul>
                 </article>
             </div>

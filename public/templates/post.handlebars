@@ -44,37 +44,11 @@
         <div class="aside">
             <div class="side-widget">
                 <article class="preview">
-                    <h2 class="preview-title">RECENT POSTS</h2>
+                    <h2 class="preview-title">RECENT COMMENTS</h2>
                     <ul>
-                        <li class="side-post-desc">Rhoncus quis varius sed velit nibh moles</li>
-                        <li class="side-post-desc">Mauris quis nunc eu nunc molestie</li>
-                        <li class="side-post-desc">Egestas et sit amet odio morbi quis nunc</li>
-                        <li class="side-post-desc">Lacinia velit in nibh sodales sed quis nunc </li>
-                        <li class="side-post-desc">Pharetra sem feugiat nibh sodales sed </li>
-                        <li class="side-post-desc">Vivamus ut cursus augue nibh sodales sed </li>
-                    </ul>
-                </article>
-                <article class="preview">
-                    <h2 class="preview-title">RECENT POSTS</h2>
-                    <ul>
-                        <li class="side-post-desc">Rhoncus quis varius sed velit nibh moles</li>
-                        <li class="side-post-desc">Mauris quis nunc eu nunc molestie</li>
-                        <li class="side-post-desc">Egestas et sit amet odio morbi quis nunc</li>
-                        <li class="side-post-desc">Lacinia velit in nibh sodales sed quis nunc </li>
-                        <li class="side-post-desc">Pharetra sem feugiat nibh sodales sed </li>
-                        <li class="side-post-desc">Vivamus ut cursus augue nibh sodales sed </li>
-                    </ul>
-                </article>
-                <article class="preview">
-                    <h2 class="preview-title">RECENT POSTS</h2>
-                    <ul>
-                        <li class="side-post-desc">Rhoncus quis varius sed velit nibh moles</li>
-                        <li class="side-post-desc">Mauris quis nunc eu nunc molestie</li>
-                        <li class="side-post-desc">Egestas et sit amet odio morbi quis nunc</li>
-                        <li class="side-post-desc">Lacinia velit in nibh sodales sed quis nunc </li>
-                        <li class="side-post-desc">Pharetra sem feugiat nibh sodales sed </li>
-                        <li class="side-post-desc">Vivamus ut cursus augue nibh sodales sed </li>
-                    </ul>
+                        {{#getComments}}
+                        <li class="side-post-desc">{{comment}}</li>
+                        {{/getComments}}
                 </article>
             </div>
         </div>
